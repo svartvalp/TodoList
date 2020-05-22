@@ -3,10 +3,34 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import {createMuiTheme, ThemeProvider} from '@material-ui/core/styles'
+import {purple, grey} from '@material-ui/core/colors/'
+
+
+const theme = createMuiTheme({
+  palette : {
+    type : 'dark',
+    primary : {
+      main : purple[300]
+    },
+    secondary : {
+      main : grey[700]
+    },
+    text : {
+      primary : grey[300]
+    }
+  }, 
+  status : {
+    danger : 'orange',
+  }
+})
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ThemeProvider theme = {theme}>
+      <App />
+    </ThemeProvider>
+    
   </React.StrictMode>,
   document.getElementById('root')
 );
