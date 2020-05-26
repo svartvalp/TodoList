@@ -37,7 +37,7 @@ function App() {
      <Container color = 'primary'>
       <AddTodoModal addTodo = {(value) => {
         const newTodo = {
-          id : todos.length,
+          id : Date.now(),
           text : value,
           done : false
         }
@@ -46,7 +46,7 @@ function App() {
         setTodos(temp)
         save(temp)
       }} />
-       <TodoList todos = {todos} setTodos = {setTodos} save = {save} />
+       <TodoList todos = {todos} setTodos = {setTodos} />
      </Container>
    </div>
   );

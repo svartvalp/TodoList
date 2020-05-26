@@ -2,7 +2,7 @@ import React from 'react'
 import {Todo} from './Todo'
 import {EmptyTodoList} from './EmptyTodoList'
 
-export const TodoList = ({todos, setTodos, save}) => {
+export const TodoList = ({todos, setTodos}) => {
 
     const deleteTodo = (todo) => {
         let temp = todos.slice()
