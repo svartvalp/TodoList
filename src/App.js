@@ -21,6 +21,9 @@ function App() {
     loadTodos()
   }, [])
 
+  useEffect(() => {
+    save(todos)
+  }, [todos, setTodos]) 
 
   return (
    <div className = "main-container">

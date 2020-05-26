@@ -8,7 +8,6 @@ export const TodoList = ({todos, setTodos, save}) => {
         let temp = todos.slice()
         temp.splice(todos.indexOf(todo), 1)
         setTodos(temp)
-        save(temp)
     }
 
     const changeIsDone = (todo) => {
@@ -17,7 +16,6 @@ export const TodoList = ({todos, setTodos, save}) => {
         updatedTodo.done = !updatedTodo.done
         temp[temp.indexOf(todo)] = updatedTodo
         setTodos(temp)
-        save(temp)
     }
 
     return (<div>
